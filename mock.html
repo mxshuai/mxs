@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+	<title>充值</title>
+
+	<script src="http://lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"></script>
+<script src="http://mockjs.com/dist/mock.js"></script>
+	
+</head>
+<body>
+<div class="asd">11111</div>
+</body>
+<script>
+$(function(){
+Mock.mock(/act/,  {
+    type: 'get'
+})
+
+$.ajax({
+    url: '/act/dingding',
+    dataType: 'json',
+    data: {
+        foo: 1,
+        bar: 2,
+        faz: 3
+    }
+}).done(function(data, status) {
+console.log(1111)
+console.log(data)
+   // $(".asd").html('data')
+})
+})
+</script>
+
+</html>
